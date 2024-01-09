@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qaisar Moin</title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+  </body>
+  <script>
+    //Here we are learning setInterval(callBackFunction,timeInMillSecond)
+
+    setInterval(() => {
+      //   console.log("Qaisar Moin", Math.random());
+    }, 1000);
+    //here we are printing Math.random() only to see the working of the setInterval Method
+
+    //-----------------------><----------------------\\
+
+    //In the setInterval there is also a third parameter
+
+    // setInterval(refrence,time,parameter)
+
+    // const sayMyName = function (str) {
+    //   console.log(str, Math.random());
+    // };
+    // setInterval(sayMyName, 2000, "Qaisar");
+
+    //setInterval(sayMyName, 2000, "parameter");
+
+    //-----------------------><----------------------\\
+
+    //Now to stop the we also have clearInterval(refrence of setInterval)
+    // let container1 = setInterval(randomNumberName, 1000);
+    // clearInterval(container1);
+
+    //-----------------------><----------------------\\
+
+    //My First mini project in this project i have displayed random number in ever click when i press stat and when i press stop it stops and again show hello world
+
+    const randomNumberName = function () {
+      let number = document.querySelector("h1");
+      number.innerText = Math.floor(Math.random() * 100);
+    };
+
+    let container = null;
+
+    const startNumber = function () {
+      // the changes in the start function in the given statement of the stop function is the use of if (conatiner == null){}
+      if (container === null) {
+        container = setInterval(randomNumberName, 1000);
+      }
+      console.log("Started");
+    };
+
+    const stopNumber = function () {
+      clearInterval(container);
+      console.log("Stopped");
+      document.querySelector("h1").innerText = "Hello World";
+      //abhi tak ham value ko overwrite kar rahe teh but in below line i have reset conatiners vlaue to null for this i must have to make some changes in the start function
+      container = null;
+    };
+
+    document.querySelector("#start").addEventListener("click", startNumber);
+    document.querySelector("#stop").addEventListener("click", stopNumber);
+  </script>
+</html>

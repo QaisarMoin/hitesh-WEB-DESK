@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohd Qaisar moin</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <ul class="language">
+      <li>JavaScript</li>
+    </ul>
+  </body>
+  <script>
+    function addLang(lang) {
+      let ul = document.querySelector(".language");
+      let li = document.createElement("li");
+      li.innerText = lang;
+      ul.appendChild(li);
+    }
+    addLang("Pyhton");
+    addLang("C++");
+    //-----------------------><----------------------\\
+    //  form this above method to add one language name it has to traverse full tree for that
+    //-----------------------><----------------------\\
+
+    // Now we are makeing a function in optimise way so that it will not traverse full tree to add one list item
+
+    function addOptiLang(lang) {
+      const list = document.createElement("li");
+      list.appendChild(document.createTextNode(lang));
+      //yaha par list element item me ek TextNode child attach kardiye hai
+      document.querySelector(".language").appendChild(list);
+      //yaha par language name ke class ko select kar ke usme ek child add kardiye hai joke (list) list item  hai
+    }
+    //is function mai pura tree traverse karne ke koi jarurat nahi hai sidhe ek child bana kar attack kar diye
+
+    addOptiLang("goLang");
+    addOptiLang("go");
+    //-----------------------><----------------------\\
+    //-----------------------><----------------------\\
+
+    //Edit
+    // Method to select and replace list item in betwen
+    // 1) first method By :- direct changing innerHTML
+    const secLang = document.querySelector("li:nth-child(2)");
+    secLang.innerHTML = "Qaisar Moin";
+
+    // 2) second Method By :- changing outerHTML
+    const thirdLang = document.querySelector("li:first-child");
+    //selecting first child from bunch of li's
+
+    // thirdLang.outerHTML = "<li>Meer<\li>";
+
+    // 3) Third Method By :- replacing with newly created li element
+    const fourLang = document.createElement("li");
+    // creating li
+    fourLang.textContent = "WWE";
+    //adding text
+    // secLang.replaceWith(fourLang);
+    // replacing with secLang
+
+    //-----------------------><----------------------\\
+    //How to remove any thing from body with the JS
+    // I want to remove 2nd element means Qaisr Moin
+
+    const remov = document.querySelector("li:nth-child(2)");
+    remov.remove();
+    // Yes it is this simple
+  </script>
+</html>

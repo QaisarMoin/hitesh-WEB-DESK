@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qaisar Moin</title>
+  </head>
+  <body style="background-color: #212121; color: #fff"></body>
+  <script>
+    //--------------------------><----------------------\\
+    // here  i am learning that how to create element from jS
+
+    const div = document.createElement("div");
+    // jo bhi create karna hai backet andar naame likh do ex:- ('p')paragraph ('ul')unordered list .....
+
+    console.log(div);
+
+    //now we are adding class and is in this created div
+    div.className = "main";
+    div.id = "myId";
+
+    // method to set custome attribute in the div.setAttribute('name_of_attri..' , 'value -f attr..')
+
+    div.setAttribute("title", "Mohd-Qaisar-Moin");
+
+    // styling that created div
+
+    div.style.backgroundColor = "Green";
+    div.style.padding = "12px";
+
+    //Method to add text in the div
+    //there are two  method
+
+    // 1) direct method
+    // div.innerText = "Qaisar Moin";
+
+    // 2) By creating text node This is the best method
+    const addtext = document.createTextNode("Created Node");
+    //yaha par document me ek text node bana diye hamne
+    div.appendChild(addtext);
+    //yaha par hamne created text node ko div ka child bana diye
+
+    //--------------------------><----------------------\\
+
+    //But abhi bhi display nahi ho raha hai iske wajah hai ke abhi hamne jo main div hamne banae hai usko body ka chid declare nahi kiye hai jo ke document ke andar hai
+
+    document.body.appendChild(div);
+  </script>
+</html>

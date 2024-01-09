@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: black;
+   
+}
+body{
+    background-color: #434343;
+}
+.red{
+    
+
+}
+#selector{
+    height: 22px;
+    width: 100px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API REQUEST</title>
+  </head>
+  <body style="background-color: #212112; color: aliceblue">
+    <h1>Numbers are status</h1>
+
+    0 UNSENT Client has been created. open() not called yet. <br />
+    1 OPENED open() has been called.<br />
+    2 HEADERS_RECEIVED send() has been called, and headers and status are
+    available. <br />
+    3 LOADING Downloading; responseText holds partial data. <br />
+    4 DONE The operation is complete.
+  </body>
+  <script>
+    // new XMLHttpRequest()  is the method by which i can data send and recieve kar sakte hai . Yes it is also an object
+
+    const xrs = new XMLHttpRequest();
+
+    // xrs.open('Tpye-of-request ('GET'/'POST')' , Link of api / refrence of api)
+
+    //Both of the Example are as given below
+
+    const requestUrl = "https://api.github.com/users/hiteshchoudhary";
+
+    //Passing direct Linkto the XMLHttpsRequest
+    xrs.open("GET", "https://api.github.com/users/hiteshchoudhary");
+
+    //passing refrence of the string to XMLHttps.
+    xrs.open("GET", requestUrl);
+
+    //.readyState bata hai current state
+    console.log(xrs.readyState);
+    //this above console.log will only print the first state because we are not tacking it further
+
+    // for continously tracking of the current state we have to use .onreadystatehange = function(){the work you want to do while changing the state of the request of the API}
+
+    xrs.onreadystatechange = function () {
+      console.log(xrs.readyState);
+      if (xrs.readyState === 4) {
+        // JSON.parse() will convert string to json(object)
+        let data = JSON.parse(this.responseText);
+        //this. will tell the that we are taking about the current syntax AND responseText will bring the information form the api to the console of the browser
+        console.log(typeof data);
+
+        console.log("Followers are :-", data.followers);
+      }
+    };
+
+    xrs.send();
+  </script>
+</html>

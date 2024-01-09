@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML events</title>
+  </head>
+  <body style="background-color: #414141; color: aliceblue">
+    <h2>Amazing image</h2>
+    <div>
+      <ul id="images">
+        <li>
+          <img
+            width="200px"
+            id="photoshop"
+            src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="photoshop"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="japan"
+            src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="river"
+            src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="owl"
+            src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="prayer"
+            src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <a style="color: aliceblue" href="https://google.com" id="google"
+            >Google</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    // I want to make a way so that when i click on photo an alert popup
+
+    // 1) first way not recomended. .onclick = function(){statement}
+    // document.getElementById("owl").onclick = function () {
+    //   alert("Mohd Qaisar Moin clicked on photo");
+    // };
+
+    // 2) second way it is highly recomended
+    // It is eventListenrs
+    // const eventList = document.getElementById("owl");
+    // eventList.addEventListener("click", function () {
+    //   alert("Mohd Qaisar Moin clicked on photo");
+    // });
+
+    // .addEventListener('action name' , function(e(or any name)){
+    //   })
+
+    // this {e} in the addEventListener is the event object which has many properites in it for wxample given below
+
+    // eventList.addEventListener("click", function (e) {
+    //   console.log(e);
+    //   //   e.stopPropagation();
+    //   // down below explanation
+    // });
+
+    //-----------------------><----------------------\\
+    //-----------------------><----------------------\\
+
+    // In the eventListener('click',function(e){},false/true)
+    //false and true are related to bubbling and capturing
+    //false(default) => Bubbling => phle child execute hoga phir parent
+    //true => cpaturing => phle parent execute hoga phir child
+
+    //agar hame chiyea ke parent and child alag alag ho jay and koi bubbling na ho toh then we can use e.stopPropagation
+
+    //-----------------------><----------------------\\
+    // chan chate hai ke google link me click karke wo hame google homepage na leke jay and ek message print karde
+    // document.getElementById("google").addEventListener("click", function (e) {
+    //   console.log("clicked on google");
+    //   e.preventDefault();
+    //   //isse redirect nahi karega
+    //   e.stopPropagation();
+    //   //isse bubbling nahi hoge
+    // });
+
+    //-----------------------><----------------------\\
+    //Now i want to make a project that when i click on any image it disappears
+
+    document.querySelector("#images").addEventListener("click", function (e) {
+      // .target jis element par action hua hai use select karke dedeta hai
+      //   const getImg = e.target.parentNode;
+      //ham parent node is liye le rahe kiyo ke hame sirf image delete nahi karna hai sath mai li bhi delete karna hai
+      //   console.log(getImg);
+      //   getImg.remove();
+      // isme problem ye hai ke jab ham li par click karte hai to yah li ke parent ko he delete kar deta hai
+
+      //to remove this problem we have to check some condition
+      // tagName means IMG,LI,DIV contaoner ke naam
+      if (e.target.tagName === "IMG") {
+        const getImg = e.target.parentNode;
+        getImg.remove();
+        console.log(`Image is removed`);
+      } else {
+        console.log(`Invalid click`);
+      }
+    });
+  </script>
+</html>

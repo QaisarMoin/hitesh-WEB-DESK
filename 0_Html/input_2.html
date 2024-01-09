@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Two</title>
+    <style>
+      Body {
+        background-color: #414144;
+        color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>FORM for JEC</h1>
+    <form action="#" method="GET" autocomplete="off">
+      <div class="text_FirstName">
+        <label for="firstName">first name</label>
+        <br />
+        <input
+          type="text"
+          name=""
+          id="firstName"
+          placeholder="firstname"
+          value="Qaisar"
+        />
+      </div>
+
+      <div class="text_middelname">
+        <label for="middelname">middelName</label>
+        <br />
+        <input
+          type="text"
+          name=""
+          id="middelname"
+          placeholder="middelName"
+          value="Moin"
+        />
+        <!-- here value is the default name which is filled bt the form by default only  -->
+      </div>
+      <br />
+      <!-- there is also a type of reset which reset all the input boxes in the form 
+here value is the name for reset button  -->
+
+      <div class="pass_and_email">
+        <input type="email" name="" id="" placeholder="Email" /><br />
+        <input type="password" name="" id="" placeholder="Password" />
+      </div>
+      <br />
+
+      <dv class="selector">
+        <label for="sele">place name</label><br />
+        <!--label for selector -->
+        <select name="Selector" id="sele">
+          <option value="Jabalpur">Jabalpur</option>
+          <option value="Bhopal">Bhopal</option>
+          <option value="Indore">Indore</option>
+        </select>
+      </dv>
+
+      <div class="radio">
+        <h3>Who are you</h3>
+        <!-- Give all radio to same name to achive in which we select the only one in many opptions like multiple choice question  -->
+        <label for="Qaisar">Qaisar</label>
+        <input type="radio" name="name" id="Qaisar" placeholder="" />
+        <label for="Meer">Meer</label>
+        <input type="radio" name="name" id="Meer" placeholder="" />
+      </div>
+      <br />
+
+      <div class="week">
+        <label for="birth"> Date of Birth</label>
+        <input type="date" name="DOB" id="birth" />
+      </div>
+      <div class="reset">
+        <input type="reset" value="reset" />
+      </div>
+      <button type="submit">submit</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohd Qaisar Moin</title>
+  </head>
+  <body>
+    <h1>Mohd Qaisar Moin</h1>
+    <button id="stop">stop</button>
+  </body>
+  <script>
+    //setTimeout() if a method jo kaam ek baar karega but given time ke baad
+    //setTimeout(call-back-fun,time-in_millisec)
+
+    //With call Back function
+    // setTimeout(() => {
+    //   console.log("Qaisar Moin");
+    // }, 2000);
+
+    //With function refrence
+    // const callQaisar = function () {
+    //   console.log("Qaisar Moin");
+    // };
+    // setTimeout(callQaisar, 2000);
+    // i have passed refrence in the setTimeout method
+
+    //-----------------------><----------------------\\
+
+    // ham chate hai h1<Mohd Qaisar Moin ke gejah Meer Ashraf aa jay but 2sec baad with the help of setTimeout method
+
+    // setTimeout(() => {
+    //   let sel = document.querySelector("h1");
+    //   sel.innerText = "Meer Ashraf";
+    // }, 2000);
+
+    //-----------------------><----------------------\\
+
+    // ham chate hai h1<Mohd Qaisar Moin ke gejah Meer Ashraf aa jay but 2sec baad with the help of setTimeout method BUT agar ab ham name change hone ke phle stop button par click kar de toh naam change nahi hona chiyea
+    // in this we use clearTimeout(refrence of setTimeout)
+
+    let clearSetTime = setTimeout(() => {
+      let sel = document.querySelector("h1");
+      sel.innerText = "Meer Ashraf";
+    }, 2000);
+    // variable me store hone ke baad me bhi ye apna kaam kerega
+
+    document.querySelector("#stop").addEventListener("click", () => {
+      clearTimeout(clearSetTime);
+      console.log("STOPPED");
+    });
+  </script>
+</html>
