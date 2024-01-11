@@ -42,7 +42,7 @@ coding.forEach(print); // right
 //})
 
 coding.forEach((val, Index, fullArr) => {
-  // console.log(val , Index, fullArr);
+  console.log(val, Index, fullArr);
   // you can see the power of forEach loop
 });
 
