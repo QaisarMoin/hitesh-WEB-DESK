@@ -13,7 +13,7 @@
 // const chai = new createUser("Mohd", "Qaisar@gooale.com", "123");
 // console.log(chai);
 
-//aap yaha dekho ge ke username print nahi hua hai kiyo ke function call toh ho raha hai but execution time khatam hote he wo remove ho jata hai islye to print nahi ho raha hai
+//aap yaha dekho ge ke username print nahi hua hai kiyo ke function call toh ho raha hai but execution time khatam hote he wo remove ho jata hai islye username print nahi ho raha hai
 //AND
 // Called toh print ho ga kiyo ke function toh call ho raha hai
 

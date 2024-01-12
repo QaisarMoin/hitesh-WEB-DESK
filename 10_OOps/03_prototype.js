@@ -9,7 +9,7 @@
 //--------------------------><----------------------\\
 //--------------------------><----------------------\\
 
-// Ab mere pass ek task hai ke ek trueLength() ka method banana hai jo ke har string me avaliable ho na ke ek do jo names me space ko alag kar deta ho
+// Ab mere pass ek task hai ke ek trueLength() ka method banana hai jo ke har string me avaliable ho Na ke ek do mein ho . Jo names me space ko alag kar deta ho
 
 let myName = "Qaisar      ";
 //console.log(myName.trueLength());
@@ -32,7 +32,7 @@ let heroPower = {
 // kiyo ke Function,Array,String  sab ke sab object he toh hai
 //kiya ye method mein apni taraf se inject kar sakta hu YES
 
-//Mein chata hu ke koi bhi Object declare ho to mera banaya method usme bhi accessible ho and agar object mein add karde toh array,string,function sab wahi se pass hote hai ye methos un sab mein bhi automatic chale gaygi
+//Mein chata hu ke koi bhi Object declare ho to mera banaya method usme bhi accessible ho and agar object mein add karde toh array,string,function sab wahi se pass hote hai ye method un sab mein bhi automatic chale gayga
 // phle Object ko select karlo and prototype se apna methos banalo
 
 Object.prototype.Qaisar = function () {
@@ -50,9 +50,9 @@ myHeroes.Qaisar();
 //--------------------------><----------------------\\
 //--------------------------><----------------------\\
 
-//Abhi hamne object mein methos add kare hai toh ye method array,string, and funcion ke pass bhi hai
+//Abhi hamne object mein methods add kare hai toh ye method array,string, and funcion ke pass bhi hai
 
-//BUT agar ham ye method Array,String anf Function mein se kesi ek ko bhi dete toh yeh methos sirf ussi ke pass hoti . Agar Array ko dete toh String, Function and Object ke pass nahi hoti vice and versa
+//BUT agar ham ye method Array,String and Function mein se kesi ek ko bhi dete toh yeh methods sirf ussi ke pass hoti . Agar Array ko dete toh String, Function and Object ke pass nahi hoti vice and versa
 //Example is given below
 
 Array.prototype.onlyArrayPower = function () {
@@ -113,7 +113,7 @@ MyName.trueLength();
 // MyName ne call kiya MyName me "Qaisar        " hai mtlb "Qaisar        " ne call kiya trueLength() ko toh "Qaisar        " he this hai print kar ke dekh lo trueLength function mein
 
 "Moin".trueLength();
-// jis ne call kiya wo he this hai yaha "Moin" and "MeerAshraf" hai
+// jis ne call kiya wo he this hai yaha "Moin" and "MeerAshraf" he this hai
 "MeerAshraf".trueLength();
 
 //this.trim().length meaning is this means jo bhi aa raha hai use trim kro and legth lelo print kardo

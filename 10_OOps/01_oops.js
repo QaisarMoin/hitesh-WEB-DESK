@@ -102,7 +102,7 @@ const user6 = new User("user6_withNew", false, 321);
 console.log(user5);
 console.log(user6);
 console.log(user6.greeting());
-//this how we can the internal variable of the function
+//this how we can access the internal variable of the function
 
 //Ab indo user5 and user6 me user6 ne user5 ko overwrite nahi kiya hai wo do independent hai ek dusre se
 // print karke dekh lo

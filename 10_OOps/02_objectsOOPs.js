@@ -20,7 +20,7 @@ console.log(multiplyBy5.Name);
 //--------------------------><----------------------\\
 //--------------------------><----------------------\\
 
-// if Function bhi object toh kiya mein khuch additional functionality add kar sakta hu ??
+// if Function bhi object hai toh kiya mein khuch additional functionality add kar sakta hu ??
 //YES we can
 //For this hame phle function ka naam .prototype.apna banaya hua featrue ka naam likh do
 //Example createUser.prototype.printQaisar = function(){}
@@ -43,8 +43,8 @@ createUser.prototype.printMe = function () {
 };
 
 //ab hamne function createUser me kuch mere banaye hue properties add kardiye hai
-// lekon jab mein ne numm ke andar createUser() ke parameters de kar store kiya toh mein ne numm ko bata he nahi ke function creatUser me mein kuch properties add kare hai
-// to REMOVE THIS problem we have to use new keyword so that it give me brand new copy of the function
+// lekon jab mein ne numm ke andar createUser() ke parameters de kar store kiya toh mein ne numm ko pata he nahi ke function creatUser me mein kuch properties add kare hai
+// to REMOVE THIS problem we have to use {new} keyword so that it give me brand new copy of the function
 
 let numm = new createUser("QaisarMoin", 50);
 console.log(numm.increment());

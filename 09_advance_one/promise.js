@@ -1,4 +1,4 @@
-//promise is a object jo kukhuch time leta hai koi work karta hai and value provide karta hai
+//promise is a object jo khuch time leta hai koi work karta hai and value provide karta hai
 
 // ho sakta hai ke promise complete ho jay and ho sakta hai ke promise complete na ho
 
@@ -37,7 +37,7 @@ const promiseOne = new Promise(function (resolve, reject) {
 // step 1)
 // promiseOne.then(function () {
 
-//   //is function ke andar jo result promise one ne complete kiya hai uska result automatically aa jayga But uske liye do no ko appas me connect karna ho ga
+//   //is function ke andar jo result promiseOne ne complete kiya hai uska result automatically aa jayga But uske liye do no ko appas me connect karna ho ga promise ke andar resolve() likh kar
 
 //   console.log("resolve start working");
 // });
@@ -60,7 +60,7 @@ const promiseOne = new Promise(function (resolve, reject) {
 //--------------------------><----------------------\\
 
 // Third promise in which we are learning that how i can pass parameter from resovle to .then() call back function
-// The first letter of pof promise is capital P
+// The first letter of of promise is capital P
 let promiseThree = new Promise(function (resolve, reject) {
   setTimeout(function () {
     resolve({ userName: "Mohd Qaisar Moin", password: "12345" });
@@ -111,7 +111,7 @@ promiseFour
     // .finally means Error aaya OK sucessful hua Thab bhi OK but mujhe battao he ke hua ke nahi
     // .finally() hamesha run hoga chiye sucesss mille ya rejection mille
 
-    console.log("This is final reult of the PromiseFour ");
+    console.log("This is final result of the PromiseFour ");
   });
 
 //--------------------------><----------------------\\
