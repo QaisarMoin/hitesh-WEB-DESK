@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice</title>
+    <style>
+      /* * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      } */
+      body {
+        background-color: #212121;
+        color: whitesmoke;
+      }
+      ul li {
+        list-style: none;
+        padding: 10px;
+        margin: 10px 10px 10px 40px;
+        /* border: 2px solid red; */
+        background-color: green;
+        font-size: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      #checkboxer {
+        margin: 10px 40px;
+        height: 30px;
+        width: 30px;
+        min-width: 30px;
+        min-height: 30px;
+        border: 0px;
+      }
+      button {
+        margin: 0px 0px 10px 40px;
+        border: 4px solid whitesmoke;
+        border-radius: 20px;
+        height: 40px;
+        width: 80px;
+        min-width: 80px;
+        cursor: pointer;
+        background-color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="listItem">
+      <ul id="unlisted"></ul>
+    </div>
+  </body>
+  <script>
+    const ulListItem = document.querySelector("#unlisted");
+
+    function listAdder(task) {
+      const radioCreater = document.createElement("input");
+      radioCreater.type = "checkbox";
+      const buttonCreater = document.createElement("button");
+      const listCreater = document.createElement("li");
+      const listText = document.createTextNode(`${task}`);
+      const butnText = document.createTextNode("Delete");
+
+      radioCreater.id = "checkboxer";
+      ulListItem.appendChild(listCreater);
+      listCreater.appendChild(radioCreater);
+      listCreater.appendChild(listText);
+      buttonCreater.appendChild(butnText);
+      listCreater.appendChild(buttonCreater);
+    }
+
+    listAdder(1234);
+    listAdder(1234);
+    listAdder("Lorem ipsum dolor sit, amet consectetur adipisicing elit.");
+  </script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice</title>
+    <style>
+      /* * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      } */
+      body {
+        background-color: #212121;
+        color: whitesmoke;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="inputs" placeholder="Type Here" />
+    <div class="listItem">
+      <ul id="ulList"></ul>
+    </div>
+  </body>
+  <script>
+    const ulListItem = document.querySelector("#ulList");
+    function listAdder(task) {
+      //   let toStrings = task.toString();
+      const listCreater = document.createElement("li");
+      const listText = document.createTextNode(`${task}`);
+      console.log(typeof task);
+      listCreater.appendChild(listText);
+      ulListItem.appendChild(listCreater);
+    }
+
+    listAdder("Qaisar");
+    listAdder(123445);
+  </script>
+</html>

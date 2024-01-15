@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+body {
+  background-color: #494d5f;
+  color: aliceblue;
+  background-image: url("/newProject/weather-app/images/fullbackdes.jpeg");
+  background-size: cover;
+}
+.card {
+  /* border: 1px solid red; */
+  width: 40%;
+  min-width: 20%;
+  /* height: 60vh; */
+  text-align: center;
+  margin: 50px auto;
+  background-color: rgb(48, 46, 46);
+  box-shadow: -5px -5px 50px black;
+  border-radius: 30px;
+  background-color: transparent;
+}
+
+.search {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search input {
+  border: 0px;
+  outline: 0;
+  border-radius: 40px;
+  width: 80%;
+  height: 50px;
+  font-size: 25px;
+  padding: 10px;
+  background: transparent;
+  color: whitesmoke;
+  color: charcoal;
+  border: 1px solid whitesmoke;
+  text-align: center;
+}
+
+.search button {
+  border: 2px solid whitesmoke;
+  height: 50px;
+  width: 50px;
+  background: whitesmoke;
+  border-radius: 50%;
+  outline: 0;
+}
+
+.search button img {
+  height: 50%;
+  width: 40%;
+  cursor: pointer;
+}
+
+.information {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+  padding: 10px;
+}
+.weather .condition {
+  color: brown;
+  font-size: x-large;
+}
+.weather .temp {
+  font-size: 60px;
+}
+.card .weather {
+  margin: 1vh 0vh 5vh 0vh;
+}
+
+.weather #oops {
+  height: 30vh;
+  margin: 5vh 0vh 0vh 0vh;
+  /* border: 2px solid red; */
+}
+.information .humidity img {
+  height: 50px;
+  margin: 0px 15px 0px 0px;
+}
+.information .windSpeed img {
+  height: 50px;
+  margin: 0px 15px 0px 0px;
+}
+
+.information .humidity .humidityIndex {
+  margin: 10px 5px;
+}
+
+.information .windSpeed {
+  display: flex;
+  align-items: center;
+  margin: 4vh 5vh 2vh 0vh;
+}
+.information .humidity {
+  display: flex;
+  align-items: center;
+  margin: 4vh 0vh 2vh 5vh;
+}

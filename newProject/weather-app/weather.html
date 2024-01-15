@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/newProject/weather-app/weather.css" />
+  </head>
+  <body>
+    <div class="card">
+      <div class="search">
+        <input
+          type="search"
+          name=""
+          id="searchBox"
+          placeholder="Enter any City Name"
+        />
+        <button id="searchButton">
+          <img src="/newProject/weather-app/images/search.png" alt="" />
+        </button>
+      </div>
+      <div class="weather">
+        <img src="" alt="" id="weatherIcone" />
+        <img
+          src="/newProject/weather-app/images/welcome-white.png"
+          alt=""
+          id="oops"
+        />
+        <p id="temp" class="temp">Enter City Name</p>
+        <p id="condition" class="condition"></p>
+        <h1 id="cityName" class="city">---</h1>
+      </div>
+      <div class="information">
+        <div class="humidity">
+          <img src="/newProject/weather-app/images/humidity.png" alt="" />
+          <div class="humidityIndex">
+            <h1 id="humidity"></h1>
+            <h3>Humidity</h3>
+          </div>
+        </div>
+        <div class="windSpeed">
+          <img src="/newProject/weather-app/images/wind.png" alt="" />
+          <div class="windIndex">
+            <h1 id="windspeed"></h1>
+            <h3>windSpeed</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="/newProject/weather-app/weather.js"></script>
+</html>

@@ -23,8 +23,12 @@
   <script>
     const parent = document.querySelector(".parent");
     // console.log(parent);
-    console.log(parent.children);
+    // console.log(parent.children);
     console.log(parent.children[0]);
+    // console.log(parent.innerHTML);
+    // console.log(parent.innerText);
+    // console.log(parent.textContent);
+
     //parent.children give HTML collection
     // console.log(parent.children[1].innerHTML);
 
@@ -34,34 +38,34 @@
     }
 
     //manuplating color of the text
-    parent.children[1].style.color = "orange";
+    // parent.children[1].style.color = "orange";
 
-    //There are many other properies have for the parent element
+    //There are many other properies that have for the parent element
 
     //--------------------------><----------------------\\
 
     //for example if i want to access the firstElement of the parent and similarly the lastElement of the parent
     //method is given blelow
 
-    // 1)accessing chid from parent
+    // 1)accessing child from parent
     console.log(parent.firstElementChild);
     //it will return div with class day because it is the child of the parent class
-    console.log(parent.lastElementChild);
+    // console.log(parent.lastElementChild);
 
     // 2)accessing parent from child
 
     const oneDay = document.querySelector(".day");
     //queryselector (.day) class ke first element ko select karega means (Monday)
-    console.log(oneDay);
+    // console.log(oneDay);
 
-    console.log(oneDay.parentElement);
+    // console.log(oneDay.parentElement);
     // it will give the parent element of the child
 
     //--------------------------><----------------------\\
     //  agar ek parent ke bhaut sare child hai toh wah ek dusre ke sibling hai mtlb bhai hai
     //how to access them from one sibling to another .... method is given below
 
-    console.log(oneDay.nextElementSibling);
+    // console.log(oneDay.nextElementSibling);
 
     //--------------------------><----------------------\\
   </script>
