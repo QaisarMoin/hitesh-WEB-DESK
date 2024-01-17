@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  /* background-color: #2d2c2c; */
+  /* background: linear-gradient(135deg, #153677, #4e085f); */
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  /* background-image: linear-gradient(
+    to left top,
+    #051937,
+    #171228,
+    #190a1a,
+    #12040d,
+    #000000
+  ); */
+
+  background-image: linear-gradient(
+    to right bottom,
+    #888088,
+    #6f6d76,
+    #565a64,
+    #3f4850,
+    #29373c,
+    #1f2e2f,
+    #172422,
+    #121b15,
+    #14160c,
+    #151004,
+    #140801,
+    #100000
+  );
+
+  /* background-image: linear-gradient(
+    to right bottom,
+    #888088,
+    #655e63,
+    #443f42,
+    #252223,
+    #000000
+  ); */
+  background-position: center;
+  background-size: contain;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -35px;
+  background-attachment: fixed;
+}
+.header img {
+  height: 80px;
+  width: 80px;
+  margin-right: 20px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid red; */
+  width: 60vw;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  /* background-color: white; */
+  border-radius: 15px;
+}
+
+.todoAppSearch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid green; */
+  width: 80%;
+  border-radius: 20px;
+  /* background-color: #363051; */
+  margin-top: 20px;
+}
+
+.inputBox {
+  margin: 20px;
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  /* border: 1px solid pink; */
+  align-items: center;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.358);
+  border-radius: 40px;
+}
+
+.inputBox #inputText {
+  height: 100%;
+  width: 83%;
+  border: 0px;
+  text-align: center;
+  font-size: larger;
+  outline: 0px;
+  border-radius: 30px;
+  margin-right: 4px;
+  background-color: transparent;
+  color: white;
+  /* border: 1px solid black; */
+}
+
+.inputBox #addButton {
+  height: 100%;
+  width: 18%;
+  border-radius: 0px 30px 30px 0px;
+  outline: 0px;
+  border: 0px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.inputBox #addButton:hover {
+  background-color: #f8521f;
+}
+
+/* -------------------------------------------------------- */
+
+.todoAppList .listContainer {
+  list-style: none;
+  width: 50vw;
+  min-height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  /* border: 2px solid yellow; */
+  box-shadow: 0px 0px 10px rgba(255, 235, 205, 0.362);
+}
+
+.todoAppList .listContainer li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  border: 1px solid rgba(0, 0, 0, 0);
+  width: 80%;
+  min-height: 40px;
+  margin: 5px;
+  text-overflow: inherit;
+  position: relative;
+  font-size: 25px;
+  border-radius: 10px;
+  /* background-color: #3c345c; */
+  text-align: center;
+  box-shadow: 0px 0px 4px black;
+  padding: 1px;
+}
+
+.todoAppList .listContainer li:hover {
+  border: 1px solid green;
+}
+
+ul li::before {
+  content: "";
+  background-image: url(/newProject/toDoApp/images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  box-shadow: 0px 0px 10px black;
+  position: absolute;
+  margin-right: 640px;
+  /* border: 2px solid #d6542c; */
+}
+
+ul li:hover::before {
+  border: 2px solid green;
+}
+
+.checked::before {
+  content: "";
+  background-image: url(/newProject/toDoApp/images/checked.png);
+  background-size: cover;
+  /* background-position: center; */
+  border-radius: 50%;
+  border: 2px solid rgb(184, 215, 136);
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  margin-right: 640px;
+}
+
+.backgreen {
+  background-color: rgba(0, 0, 0, 0.358);
+  text-decoration: line-through 1px rgb(199, 106, 106);
+  /* border: 2px solid green; */
+  box-shadow: 30px solid red;
+  color: rgb(17, 161, 17);
+}
+
+#deleteNow {
+  margin-left: 660px;
+  position: absolute;
+  background-image: url(/newProject/toDoApp/icons8-delete-ios-17-glyph/icons8-delete-30.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 0px;
+  background-color: rgba(199, 199, 199, 0.834);
+  border-radius: 20px;
+  height: 30px;
+  width: 50px;
+  box-shadow: 0px 0px 5px black;
+  border: 1px solid white;
+}
+
+#deleteNow:hover {
+  border: 2px solid red;
+}
