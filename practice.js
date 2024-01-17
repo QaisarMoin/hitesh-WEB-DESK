@@ -61,25 +61,34 @@
 
 //Fetch()
 
-async function learnFetch() {
-  try {
-    let response = await fetch("https://api.github.com/users/hiteshchoudhary");
-    let convert = await response.json();
-    console.log(convert.id);
-  } catch (error) {
-    console.log("Hello there is error in fetching");
-  }
-}
+// async function learnFetch() {
+//   try {
+//     let response = await fetch("https://api.github.com/users/hiteshchoudhary");
+//     let convert = await response.json();
+//     console.log(convert.id);
+//   } catch (error) {
+//     console.log("Hello there is error in fetching");
+//   }
+// }
 
-learnFetch();
+// learnFetch();
 
-fetch("https://api.github.com/users/hiteshchoudhary")
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (responseId) {
-    console.log(responseId.id);
-  })
-  .catch(function (error) {
-    console.log("there is an error ", error);
-  });
+// fetch("https://api.github.com/users/hiteshchoudhary")
+//   .then(function (response) {
+//     return response.json();
+//   })
+//   .then(function (responseId) {
+//     console.log(responseId.id);
+//   })
+//   .catch(function (error) {
+//     console.log("there is an error ", error);
+//   });
+
+let str1 = "Qaisar";
+let str2 = " Moin";
+
+let str3 = [...str1, ...str2];
+
+str4 = str3.toString();
+
+console.log(str4.replaceAll(",", ""));

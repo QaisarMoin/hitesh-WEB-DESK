@@ -33,18 +33,18 @@ listContainer.addEventListener("click", (e) => {
     saveData();
   }
 
-  //   if (e.target.innerText === "EDIT") {
-  //     let parent = e.target.parentElement;
-  //     // parent.removeAttribute("readonly");
-  //     // parent.focus();
-  //     // e.target.innerHTML = "save";
-  //     let editText = document.createElement("input");
-  //     editText.type = "text";
-  //     console.log((editText.value = parent.innerText.value));
-  //     // parent.appendChild(editText);
-  //   }
-  //   console.log(e.target.id === "editNow");
-  //   console.log(e.target.id === "deleteNow");
+  if (e.target.innerText === "EDIT") {
+    let parent = e.target.parentElement;
+    // parent.removeAttribute("readonly");
+    // parent.focus();
+    // e.target.innerHTML = "save";
+    let editText = document.createElement("input");
+    editText.type = "text";
+    console.log((editText.value = parent.innerText.value));
+    // parent.appendChild(editText);
+  }
+  console.log(e.target.id === "editNow");
+  console.log(e.target.id === "deleteNow");
 
   if (e.target.id === "deleteNow") {
     e.target.parentElement.remove();
